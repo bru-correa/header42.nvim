@@ -6,7 +6,7 @@
 --   By: vgoncalv <vgoncalv@student.42sp.org.br>    +#+  +:+       +#+        --
 --                                                +#+#+#+#+#+   +#+           --
 --   Created: 2021/09/12 20:57:40 by vgoncalv          #+#    #+#             --
---   Updated: 2021/12/15 22:16:55 by vgoncalv         ###   ########.fr       --
+--   Updated: 2022/10/25 16:21:46 by bcorrea-         ###   ########.fr       --
 --                                                                            --
 -- -------------------------------------------------------------------------- --
 
@@ -61,7 +61,7 @@ setmetatable(Config, {
 function Config:set(opts)
 	self.__index = self
 	self.user = opts.user or "marvin"
-	self.mail = opts.user or "42.fr"
+	self.mail = opts.mail or "42.fr"
 	if opts.ft ~= nil then
 		self.ft = vim.tbl_deep_extend("force", self.ft, opts.ft)
 	end
